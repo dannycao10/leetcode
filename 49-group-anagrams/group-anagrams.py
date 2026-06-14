@@ -1,12 +1,11 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        storage = {}
+        wordDict = defaultdict(list)
 
         for word in strs:
-            sortedWord = "".join(sorted(word))
-            if sortedWord in storage:
-                storage[sortedWord].append(word)
-            else:
-                storage[sortedWord] = [word]
+            count = [0] * 26
+            for c in word:
+                count[ord(c) - ord('a')] += 1
+            wordDict[tuple(count)].append(word)
         
-        return list(storage.values())
+        return list(wordDict.values())
