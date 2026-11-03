@@ -1,7 +1,7 @@
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         wordDict = defaultdict(list)
-
+        
         for word in strs:
             count = [0] * 26
             for c in word:
