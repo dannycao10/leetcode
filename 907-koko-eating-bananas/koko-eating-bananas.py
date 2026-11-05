@@ -12,7 +12,7 @@ class Solution:
 
             if hoursNeeded <= h:
                 r = k - 1
-                res = min(res, k)
+                res = k
             else:
                 l = k + 1
         
