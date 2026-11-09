@@ -9,6 +9,6 @@ class Solution:
                 charSet.remove(s[l])
                 l += 1
             charSet.add(char)
-            maxLen = max(maxLen, r - l + 1)
+            maxLen = max(maxLen, len(charSet))
         
         return maxLen
